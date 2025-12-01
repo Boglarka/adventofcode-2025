@@ -2,7 +2,9 @@
 
 $input = "";
 
-$input = "";
+$myfile = fopen("day.txt", "r") or die("Unable to open file!");
+$input = fread($myfile, filesize("day.txt"));
+fclose($myfile);
 
 function day1($input) {
   $lines = explode("\n", trim($input));
